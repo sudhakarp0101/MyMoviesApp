@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClickAdapter(Movie movie) {
                 Intent intent = new Intent(HomeActivity.this, DetailsActivity.class);
                 intent.putExtra("movie", movie);
-                Log.i("Test",""+movie.getMovie_id());
+                Log.i("Test", "" + movie.getMovie_id());
                 startActivity(intent);
             }
 
@@ -147,7 +147,10 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onChanged(@Nullable List<Movie> movies) {
                 movieList = movies;
-                addToView();
+                if (movieList.size() != 0)
+                    addToView();
+                else
+                    Snackbar.make(layout, "Favorite List is empty, Try adding some...!", Snackbar.LENGTH_SHORT).show();
             }
         });
     }
