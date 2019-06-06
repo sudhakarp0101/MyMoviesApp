@@ -18,7 +18,7 @@
             android:theme="@style/MyTheme"
             android:parentActivityName=".activities.HomeActivity"/>
         <activity android:name=".activities.HomeActivity"
-            android:launchMode="singleTop">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -149,8 +149,10 @@ public class HomeActivity extends AppCompatActivity {
                 movieList = movies;
                 if (movieList.size() != 0)
                     addToView();
-                else
+                else {
+                    addToView();
                     Snackbar.make(layout, "Favorite List is empty, Try adding some...!", Snackbar.LENGTH_SHORT).show();
+                }
             }
         });
     }
